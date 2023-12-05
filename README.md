@@ -12,7 +12,7 @@ O presente estudo foca na implementação de um sistema de comunicação entre u
 Palavras-chave: sistema embarcado, Raspberry Pi Pico W, MicroPython, automação, medição de luz, comunicação computador-sistema.
 
 ## Vídeo demonstrativo
-Para visualizar o exemplo prático da aplicação em funcionamento, acesse o vídeo no seguinte link: [Vídeo Demonstrativo](https://youtu.be/O3IyKL1WRJY).
+Para visualizar o exemplo prático da aplicação em funcionamento, acesse o vídeo no seguinte link: [Vídeo Demonstrativo](https://youtu.be/uJmmqL0uu4g).
 
 ## Referências
 [1] RASPBERRY PI FOUNDATION. Raspberry Pi Pico: Documentation. Raspberry Pi Foundation, [s.d.]. Disponível em: [https://bit.ly/46VPAYe](https://bit.ly/46VPAYe). Acesso em: 17 nov. 2023.
