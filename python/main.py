@@ -3,6 +3,21 @@ from machine import Pin, ADC
 import network
 import simple as mqtt
 
+import machine
+from machine import I2C
+from lcd_api import LcdApi
+from i2c_lcd import I2cLcd
+ 
+# Inicia o display
+LCD_ADDR = 0x27
+LCD_NUM_ROWS = 2
+LCD_NUM_COLS = 16
+LCD_SDA = 16
+LCD_SCL = 17
+ 
+i2c = I2C(0, sda=machine.Pin(LCD_SDA), scl=machine.Pin(LCD_SCL), freq=400000)
+lcd = I2cLcd(i2c, LCD_ADDR, LCD_NUM_ROWS, LCD_NUM_COLS)
+
 def connect_to_wifi(ssid, password):
     """
     Connect to the specified Wi-Fi network.
@@ -85,6 +100,8 @@ def main():
         # Read LDR value
         ldr_value = adc.read_u16()
         print(ldr_value)
+        lcd.clear()
+        lcd.putstr('Luminosidade: \n' + str(ldr_value))
 
         # Control LEDs based on LDR value
         if ldr_value < 6000:
